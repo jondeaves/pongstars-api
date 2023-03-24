@@ -1,0 +1,38 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateLeagueInput {
+  """Unique string identifying the League"""
+  ident: String!
+
+  """Friendly name of the League"""
+  title: String!
+}
+
+type League {
+  """Unique string identifying the League"""
+  ident: String!
+
+  """Friendly name of the League"""
+  title: String!
+}
+
+type Mutation {
+  createLeague(createLeagueInput: CreateLeagueInput!): League!
+  removeLeague(ident: String!): League!
+  updateLeague(updateLeagueInput: UpdateLeagueInput!): League!
+}
+
+type Query {
+  league(ident: String!): League!
+  leagues: [League!]!
+}
+
+input UpdateLeagueInput {
+  """Unique string identifying the League"""
+  ident: String!
+
+  """Friendly name of the League"""
+  title: String!
+}
